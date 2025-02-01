@@ -14,8 +14,9 @@ class MemoryGame(Gtk.Grid):
         self.first_choice = None
         self.can_click = True
         
-        # Create pairs of words and images
-        items = random.sample(VOCABULARY, 6)  # 6 pairs = 12 cards
+        # Use min to ensure we don't request more items than available
+        num_pairs = min(6, len(VOCABULARY))
+        items = random.sample(VOCABULARY, num_pairs)
         self.setup_game(items)
     
     def setup_game(self, items):
