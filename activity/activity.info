@@ -1,0 +1,10 @@
+[Activity]
+name = LanguageLearner
+bundle_id = org.sugarlabs.LanguageLearner
+exec = sugar-activity3 activity.LanguageLearnerActivity
+icon = activity-helloworld
+activity_version = 1
+license = GPLv3+
+repository = https://github.com/sugarlabs/language-learner-activity
+summary = An interactive language learning tool for children
+tags = language;learning;education 
