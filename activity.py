@@ -6,6 +6,10 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, GObject
 
+from flashcards import FlashcardsPage
+from sentence_builder import SentenceBuilderPage
+from games import MemoryGame
+
 class LanguageLearnerActivity(activity.Activity):
     def __init__(self, handle):
         activity.Activity.__init__(self, handle)
@@ -42,10 +46,10 @@ class LanguageLearnerActivity(activity.Activity):
             Gtk.Label(label=_('Sentence Builder'))
         )
         
-        self.games_page = GamesPage()
+        self.games_page = MemoryGame()
         self.main_container.append_page(
             self.games_page,
-            Gtk.Label(label=_('Games'))
+            Gtk.Label(label=_('Memory Game'))
         )
         
         self.show_all()
